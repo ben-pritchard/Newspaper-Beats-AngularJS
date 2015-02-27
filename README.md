@@ -10,6 +10,8 @@ From your terminal, go to the newspaper directory and enter `python -m SimpleHTT
 
 Then go to localhost:8000 in your browser to view the app.
 
+You'll see, this site can't be **beat!** Ah man, gotcha again.
+
 ###COPYRIGHT INFORMATION
 
 GPL v2
