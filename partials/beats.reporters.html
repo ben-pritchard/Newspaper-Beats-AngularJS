@@ -1,7 +1,9 @@
 <h3>Add a reporter to the {{beat.name}} beat</h3>
 
 <form ng-submit="addReporter()" role="form">
-  <input type="text" ng-model="reporterName" placeholder="reporter name" required/>
+  <input type="text" ng-model="reporterName" placeholder="name" required/>
+  <input type="text" ng-model="reporterYears" placeholder="years of employment" required/>
+  <input type="text" ng-model="reporterBirthday" placeholder="birthday" required/>
 
   <button type="submit" class="btn btn-warning">Add</button>
 </form>
@@ -11,6 +13,7 @@
 
 <ul>
   <li ng-repeat="reporter in beat.reporters">
-    {{reporter.name}}
+    <a ui-sref="beats.reporters.info({ reporterId: reporter.id })">{{reporter.name}}</a>
+    <div ui-view></div>
   </li>
 </ul>

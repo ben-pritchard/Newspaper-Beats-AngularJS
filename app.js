@@ -11,4 +11,9 @@ newspaper.config(function($stateProvider) {
     templateUrl: "partials/beats.reporters.html",
     controller: "ReportersCtrl"
   });
+  $stateProvider.state("beats.reporters.info", {
+    url: "/:reporterId",
+    templateUrl: "partials/beats.reporters.info.html",
+    controller: "ReportersCtrl"
+  });
 });
