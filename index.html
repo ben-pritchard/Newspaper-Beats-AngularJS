@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="newspaper">
+  <head>
+    <meta charset="UTF-8">
+    <title>Beat Roots</title>
+    <script src="lib/angular.js"></script>
+    <script src="lib/angular-ui-router.js"></script>
+    <script src="app.js"></script>
+    <script src="services/BeatsFactory.js"></script>
+    <script src="controllers/BeatsController.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="page-header">
+        <h1>Beat Roots</h1>
+        <h3>The heart beat of news</h3>
+      </div>
+
+      <div ui-view></div>
+
+    </div>
+  </body>
+</html>
