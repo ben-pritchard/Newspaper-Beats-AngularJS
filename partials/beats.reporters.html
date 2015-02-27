@@ -10,9 +10,10 @@
 
 
 <h3>{{beat.name}} beat reporters:</h3>
-
+<label for="query">Reporters Filter</label>
+<input type="text" ng-model="query">
 <ul>
-  <li ng-repeat="reporter in beat.reporters">
+  <li ng-repeat="reporter in beat.reporters | filter:query">
     <a ui-sref="beats.reporters.info({ reporterId: reporter.id })">{{reporter.name}}</a>
     <div ui-view></div>
   </li>
