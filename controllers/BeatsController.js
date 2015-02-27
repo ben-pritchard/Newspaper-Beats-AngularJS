@@ -1,4 +1,4 @@
-newspaper.controller("BeatsCtrl", function($scope, BeatsFactory) {
+newspaper.controller("BeatsCtrl", function BeatsCtrl($scope, BeatsFactory) {
   $scope.beats = BeatsFactory.beats;
   $scope.BeatsFactory = BeatsFactory;
 });

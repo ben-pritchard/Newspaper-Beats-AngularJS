@@ -1,20 +1,23 @@
-<h3>Add a New Beat</h3>
-<form ng-submit="BeatsFactory.addBeat()" role="form">
-  <div class="form-group">
-    <input type="text" ng-model="BeatsFactory.beatName" placeholder="e.g. Music" required/>
+<div class="col-xs-6">
+  <h3>Add a New Beat</h3>
+  <form ng-submit="BeatsFactory.addBeat()" role="form">
+    <div class="form-group">
+      <input type="text" ng-model="BeatsFactory.beatName" placeholder="e.g. Music" required/>
 
-    <button type="submit" class="btn btn-danger">Add</button>
-  </div>
-</form>
+      <button type="submit" class="btn btn-danger">Add</button>
+    </div>
+  </form>
 
-<div ng-show="beats.length">
-  <h3>Beat Roots Beats:</h3>
-  <div ng-repeat="item in beats">
+  <div ng-show="beats.length">
+    <h3>Beat Roots Beats:</h3>
     <ul>
-      <li>
-        {{item.name}}
-        
+      <li ng-repeat="item in beats">
+        <a ui-sref="beats.reporters({ beatId: item.id })">{{item.name}}</a>
       </li>
     </ul>
   </div>
+</div>
+
+<div class="col-xs-6">
+  <div ui-view></div>
 </div>
